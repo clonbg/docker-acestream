@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 DIRNAME=$(dirname "$0")
-DOCKER_IMAGE_NAME="acestream-server"
+DOCKER_IMAGE_NAME="jackwzh/acestream-server"
 
 docker build \
 	--tag "$DOCKER_IMAGE_NAME" \
