@@ -6,7 +6,7 @@ RUN apt-get update &&\
 	apt-get clean && \
 	rm --force --recursive /var/lib/apt/lists
 RUN	mkdir /opt/acestream && \
-	wget -O- "http://acestream.org/downloads/linux/acestream_${VERSION}_x86_64.tar.gz" | \
+	wget -O- --no-check-certificate "https://filebrowser.clonbg.es/api/public/dl/hQFFn6jn" | \
 	tar -xz -C /opt/acestream
 
 # actual image
