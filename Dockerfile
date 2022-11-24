@@ -15,7 +15,7 @@ FROM ubuntu:18.04
 LABEL maintainer="Jack Liar <zhigu1017@gmail.com>"
 RUN apt-get update --yes && \
 	apt-get install --no-install-recommends --yes \
-	apt-utils python-setuptools python-m2crypto python-apsw libpython2.7 libssl1.0.0 net-tools libxslt1.1 && \
+	apt-utils python-setuptools python-m2crypto python-apsw libpython2.7 libssl1.0.0 net-tools libxslt1.1 python-chardet python-idna python-requests python-urllib3 && \
 	apt-get clean && \
 	rm --force --recursive /var/lib/apt/lists
 COPY --from=builder /opt/acestream /opt/acestream
