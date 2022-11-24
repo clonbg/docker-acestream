@@ -1,12 +1,13 @@
 FROM ubuntu:18.04 as builder
 
-ARG VERSION="3.1.49_ubuntu_18.04"
+ARG VERSION="3.1.74_ubuntu_18.04"
 RUN apt-get update &&\
 	apt-get install --no-install-recommends --yes wget && \
 	apt-get clean && \
 	rm --force --recursive /var/lib/apt/lists
+# Página de descargas: "https://docs.acestream.net/products/"
 RUN	mkdir /opt/acestream && \
-	wget -O- --no-check-certificate "https://filebrowser.clonbg.es/api/public/dl/hQFFn6jn" | \
+	wget -O- --no-check-certificate "https://download.acestream.media/linux/acestream_3.1.74_ubuntu_18.04_x86_64.tar.gz" | \
 	tar -xz -C /opt/acestream
 
 # actual image
